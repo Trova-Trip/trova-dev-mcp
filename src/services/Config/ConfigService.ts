@@ -1,5 +1,5 @@
 import { singleton } from "tsyringe";
-import type { DatabaseConfig } from "../types";
+import type { DatabaseConfig } from "./ConfigService.types";
 
 @singleton()
 export class ConfigService {

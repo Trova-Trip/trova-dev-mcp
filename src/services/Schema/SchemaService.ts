@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { inject, singleton } from "tsyringe";
-import { MongoConnectionService } from "./MongoConnectionService";
-import type { SchemaValue, SerializableSchema } from "../types";
+import { MongoConnectionService } from "../Mongo";
+import type { SchemaValue, SerializableSchema } from "./SchemaService.types";
 
 @singleton()
 export class SchemaService {

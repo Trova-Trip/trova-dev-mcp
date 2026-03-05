@@ -4,8 +4,8 @@ import {
   connectionClient,
   loadServiceModules,
 } from "@trova-trip/trova-services";
-import { ConfigService } from "./ConfigService";
-import type { DatabaseConfig } from "../types";
+import { ConfigService } from "../Config";
+import type { DatabaseConfig } from "../Config/ConfigService.types";
 
 @singleton()
 export class MongoConnectionService {
