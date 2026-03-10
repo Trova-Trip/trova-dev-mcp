@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "bun run src/index.ts",
-    "dev": "bun --watch run src/index.ts"
+    "dev": "bun --watch run src/index.ts",
+    "generate-config": "./scripts/generate-config.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.2",

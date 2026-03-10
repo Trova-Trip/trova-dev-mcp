@@ -41,55 +41,29 @@ The server requires the following environment variables:
 | `DATABASE_USERNAME` | Database username |
 | `DATABASE_PASSWORD` | Database password |
 
-## Connecting to Claude Desktop
+## Generating the MCP Config
 
-1. Open **Claude Desktop**
-2. Go to **Settings** (`Cmd + ,` on macOS)
-3. Click **Developer** in the left sidebar
-4. Click **Edit Config** to open `claude_desktop_config.json`
-5. Add the following configuration:
+Run the config generator to get a ready-to-paste JSON config with your resolved paths and credentials:
 
-```json
-{
-  "mcpServers": {
-    "trova-dev": {
-      "command": "bun",
-      "args": ["run", "/absolute/path/to/trova-dev-mcp-server/src/index.ts"],
-      "env": {
-        "DATABASE_URI": "your-database-uri",
-        "DATABASE_USERNAME": "your-username",
-        "DATABASE_PASSWORD": "your-password"
-      }
-    }
-  }
-}
+```sh
+bun run generate-config
 ```
 
-6. Replace `/absolute/path/to/` with the actual path where you cloned the repo
-7. Fill in the database credentials
-8. Restart Claude Desktop
+This resolves the absolute path to your `bun` binary and entry file automatically. If no `.env` file exists, it falls back to `.env.example` placeholders.
+
+## Connecting to Claude Desktop
+
+1. Generate the config: `bun run generate-config`
+2. Open **Claude Desktop** > **Settings** (`Cmd + ,`) > **Developer** > **Edit Config**
+3. Merge the generated output into the `mcpServers` key in `claude_desktop_config.json`
+4. Restart Claude Desktop
 
 After restarting, the trova-dev tools should appear in your Claude Desktop chat.
 
 ## Connecting to Claude Code (CLI)
 
-Add the same configuration to `~/.claude.json`:
-
-```json
-{
-  "mcpServers": {
-    "trova-dev": {
-      "command": "bun",
-      "args": ["run", "/absolute/path/to/trova-dev-mcp-server/src/index.ts"],
-      "env": {
-        "DATABASE_URI": "your-database-uri",
-        "DATABASE_USERNAME": "your-username",
-        "DATABASE_PASSWORD": "your-password"
-      }
-    }
-  }
-}
-```
+1. Generate the config: `bun run generate-config`
+2. Merge the generated output into the `mcpServers` key in `~/.claude.json`
 
 ## Running standalone
 
