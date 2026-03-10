@@ -14,15 +14,11 @@ registerAllTools(server);
 
 const main = async () => {
   try {
-    console.error("Connecting to MongoDB...");
     const mongoConnection = container.resolve(MongoConnectionService);
     await mongoConnection.connect();
 
-    console.error("Starting trova-dev MCP server...");
     const transport = new StdioServerTransport();
     await server.connect(transport);
-
-    console.error("trova-dev MCP server running");
   } catch (error) {
     console.error("Failed to start server:", error);
     process.exit(1);
