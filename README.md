@@ -60,6 +60,16 @@ This resolves the absolute path to your `bun` binary and entry file automaticall
 
 After restarting, the trova-dev tools should appear in your Claude Desktop chat.
 
+## Connecting to ChatGPT Desktop
+
+1. Generate the config: `bun run generate-config`
+2. Open **ChatGPT Desktop** > **Settings** (`Cmd + ,`) > **Tools & integrations** > **Add MCP tool** > **Add manually**
+3. Enter a name (e.g., `trova-dev`) and paste the generated config values:
+   - **Command**: the `command` value from the generated config (path to `bun`)
+   - **Args**: the `args` values (e.g., `run /absolute/path/to/src/index.ts`)
+   - **Env vars**: add each key-value pair from the `env` object
+4. Click **Add** and the trova-dev tools should appear in your ChatGPT chat
+
 ## Connecting to Claude Code (CLI)
 
 1. Generate the config: `bun run generate-config`
