@@ -17,7 +17,7 @@ An MCP (Model Context Protocol) server that exposes Trova development tools to A
 
 ## Setup
 
-### 1. Install Bun
+### 1. [Install Bun](https://bun.com/docs/installation)
 
 ```sh
 curl -fsSL https://bun.sh/install | bash
@@ -33,7 +33,7 @@ bun install
 
 ### 3. Configure environment variables
 
-The server requires the following environment variables:
+Create a .env file following environment variables:
 
 | Variable | Description |
 |----------|-------------|
