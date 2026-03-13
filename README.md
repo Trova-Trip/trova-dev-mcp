@@ -3,7 +3,11 @@
 An MCP (Model Context Protocol) server that exposes Trova development tools to AI assistants like Claude. It connects to the Trova MongoDB database and provides tools for exploring schemas and running aggregation queries.
 
 
-https://github.com/user-attachments/assets/b5674f58-b30d-4d90-8bba-348f77b8e00a
+
+https://github.com/user-attachments/assets/368bb1cf-4f4b-4574-afb2-66673ceea4e0
+
+
+
 
 
 ## Available Tools
